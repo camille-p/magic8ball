@@ -1,17 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
-
+#wrapper h1 {
+    font-size: 42px;
+    
+}
+h1 span {
+    font-family: 'Play', sans-serif;
+    font-weight: 400;
+}
+#wrapper h2 {
+    font-size: 32px;
+}
+#wrapper p {
+    font-size: 26px;
+}
+#wrapper h1, #wrapper h2, #wrapper p {
+    margin-bottom: 10px;
+}
+input {
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
 #eight-ball {
     border-radius: 50%;
-    background-color: black;
+    background-color: #000;
     height: 500px;
     width: 500px;
     margin: 0 auto;
     text-align: center;
     position: relative;
+    margin-top: 30px;
 }
 
 .ball {
-    background-color: red;
+    background-color: #fff;
     height: 50%;
     width: 50%;
     border-radius: 50%;
@@ -20,7 +43,10 @@
     left: 25%;
 }
 
-#eight {
-    padding-top: 25%;
-    font-size: 130px;
+p#eight {
+    padding-top: 20%;
+    font-size: 150px;
+    color: #000;
+    font-weight: 700;
+    font-family: 'Play', sans-serif;
 }
