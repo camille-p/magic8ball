@@ -1,0 +1,26 @@
+
+
+#eight-ball {
+    border-radius: 50%;
+    background-color: black;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.ball {
+    background-color: red;
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+#eight {
+    padding-top: 25%;
+    font-size: 130px;
+}
