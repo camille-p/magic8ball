@@ -100,4 +100,8 @@ question.addEventListener('keyup',function(e){
   }
 });
 
-eightball.addEventListener("animationend", results)
+eightball.addEventListener("animationend", results);
+
+button.addEventListener('click',function(e){
+    location.reload();
+});
