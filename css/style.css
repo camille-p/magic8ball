@@ -38,50 +38,52 @@ input {
     text-align: center;
     position: relative;
     margin-top: 75px;
+    display: grid;
+    grid-template: 25% 50% 25% / 25% 50% 25%;
+    
 }
 
-.ball {
+#ball-answer {
     background-color: #fff;
-    height: 50%;
-    width: 50%;
     border-radius: 50%;
-    position: absolute;
-    top: 25%;
-    left: 25%;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
 p#eight {
-    padding-top: 20%;
     font-size: 150px;
     color: #000;
     font-weight: 700;
     font-family: 'Play', sans-serif;
-    
 }
 
 
 
-#answer {
+/*#answer {
     width: 0;
 	height: 0;
-	border-left: 80px solid transparent;
-	border-right: 80px solid transparent;
+	border-left: 90px solid transparent;
+	border-right: 90px solid transparent;
     border-bottom: 150px solid #011070;
-    position: absolute;
-    top: 12%;
-    left: 18%;
     
-    
-}
+} */
+
 p#answer {
+  
     color:#AED8EB;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px;
 }
 
 .show {
-    display: block;
-    background-color: #010726;
+    background-color: #010726!important;
     
 }
 
