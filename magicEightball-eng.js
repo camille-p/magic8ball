@@ -70,7 +70,11 @@ switch (randomNumber) {
     let question = document.getElementById('question');
     let ballAnswer = document.getElementById('ball-answer');
 
-    let shakeIt = function() {
+        let shakeIt = function() {
+            eightball.classList.add("shake-hard");
+            
+        }
+    let results = function() {
         if(question.value.length < 1) {
             alert('You need to ask a question!');
         } else {
@@ -82,9 +86,18 @@ switch (randomNumber) {
     }
 
 
+/* eightball.addEventListener('click', results);
+question.addEventListener('keyup',function(e){
+    if (e.keyCode === 13) {
+        results();
+  }
+}); */
+
 eightball.addEventListener('click', shakeIt);
 question.addEventListener('keyup',function(e){
     if (e.keyCode === 13) {
         shakeIt();
   }
 });
+
+eightball.addEventListener("animationend", results)
