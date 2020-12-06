@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
+#wrapper {
+    text-align: center;
+}
 #wrapper h1 {
     font-size: 42px;
-    
+    margin-bottom: 50px;
+    margin-top: 10px;
 }
 h1 span {
     font-family: 'Play', sans-serif;
@@ -10,17 +14,20 @@ h1 span {
 }
 #wrapper h2 {
     font-size: 32px;
+    margin-bottom: 10px;
 }
 #wrapper p {
     font-size: 26px;
 }
 #wrapper h1, #wrapper h2, #wrapper p {
-    margin-bottom: 10px;
+    
+    font-family: 'Helvetica';
 }
 input {
-    padding: 15px;
+    padding: 15px 180px;
     border-radius: 4px;
-    margin-top: 5px;
+    margin-top: 25px;
+    
 }
 #eight-ball {
     border-radius: 50%;
@@ -30,7 +37,7 @@ input {
     margin: 0 auto;
     text-align: center;
     position: relative;
-    margin-top: 30px;
+    margin-top: 75px;
 }
 
 .ball {
@@ -49,4 +56,35 @@ p#eight {
     color: #000;
     font-weight: 700;
     font-family: 'Play', sans-serif;
+    
+}
+
+
+
+#answer {
+    width: 0;
+	height: 0;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+    border-bottom: 150px solid #011070;
+    position: absolute;
+    top: 12%;
+    left: 18%;
+    
+    
+}
+p#answer {
+    color:#AED8EB;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.show {
+    display: block;
+    background-color: #010726;
+    
+}
+
+.hide {
+    display: none;
 }

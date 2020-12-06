@@ -14,16 +14,18 @@
 <body>
     <div id="wrapper">
         <h1>Magic <span>8</span> Ball</h1>
-        <p>(I only answer to yes/no questions)</p>
+        
         <h2>Ask me what you want to know and shake it baby</h2>
-        <input type="text"/>
+        <p>(I only answer to yes/no questions)</p>
+        <input type="text" id="question"/>
         <div id="eight-ball">
-            <div class="ball">
+            <div class="ball answer" id="ball-answer">
                 <p id="eight">8</p>
-                <p id="answer"></p>
+                <p id="answer" class="hide"></p>
             </div>
         </div>
     </div>
+    <script src="./magicEightball-eng.js"></script>
 </body>
 
 </html>
