@@ -1,4 +1,4 @@
-let randomNumber = Math.floor(Math.random() * 21);
+let randomNumber = Math.floor(Math.random() * 20);
 let eightBall = ' '
 switch (randomNumber) {
     case 0:

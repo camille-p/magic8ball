@@ -1,12 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
+html {
+    height: 100%; 
+}
+
+
+body {
+    background: rgb(24,8,74);
+background: linear-gradient(180deg, rgba(24,8,74,1) 0%, rgba(65,8,75,1) 31%, rgba(121,9,77,1) 60%, rgba(139,38,138,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #wrapper {
     text-align: center;
+    
 }
 #wrapper h1 {
     font-size: 42px;
     margin-bottom: 50px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 h1 span {
     font-family: 'Play', sans-serif;
@@ -20,7 +39,7 @@ h1 span {
     font-size: 26px;
 }
 #wrapper h1, #wrapper h2, #wrapper p {
-    
+    color: #f6ebf2;
     font-family: 'Helvetica';
 }
 input {

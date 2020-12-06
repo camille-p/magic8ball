@@ -62,3 +62,36 @@ switch (randomNumber) {
     eightBall = "N'y compte pas";
     break;
 }
+
+
+
+let eight = document.getElementById('eight');
+let answer = document.getElementById('answer');
+let eightball = document.getElementById('eight-ball');
+let question = document.getElementById('question');
+let ballAnswer = document.getElementById('ball-answer');
+
+    let shakeIt = function() {
+        eightball.classList.add("shake-hard");
+        
+    }
+let results = function() {
+    if(question.value.length < 1) {
+        alert('You need to ask a question!');
+    } else {
+        ballAnswer.classList.add("show");
+        answer.classList.remove("hide");
+        eight.classList.add("hide");
+        answer.innerText = eightBall;
+    }
+}
+
+
+eightball.addEventListener('click', shakeIt);
+question.addEventListener('keyup',function(e){
+if (e.keyCode === 13) {
+    shakeIt();
+}
+});
+
+eightball.addEventListener("animationend", results)
