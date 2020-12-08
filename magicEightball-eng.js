@@ -69,6 +69,10 @@ switch (randomNumber) {
     let eightball = document.getElementById('eight-ball');
     let question = document.getElementById('question');
     let ballAnswer = document.getElementById('ball-answer');
+    let button = document.getElementById('button');
+    let buttonAgain = document.createElement('button');
+    buttonAgain.innerHTML = "I have another question";
+
 
         let shakeIt = function() {
             eightball.classList.add("shake-hard");
@@ -85,23 +89,23 @@ switch (randomNumber) {
         }
     }
 
+eightball.addEventListener('click', shakeIt);  
 
-/* eightball.addEventListener('click', results);
-question.addEventListener('keyup',function(e){
-    if (e.keyCode === 13) {
-        results();
-  }
-}); */
 
-eightball.addEventListener('click', shakeIt);
-question.addEventListener('keyup',function(e){
-    if (e.keyCode === 13) {
+question.addEventListener('keypress', () => {
+    if (event.keyCode === 13) {
         shakeIt();
-  }
-});
+    }
+    });
 
-eightball.addEventListener("animationend", results);
+button.addEventListener('click', shakeIt);    
 
-button.addEventListener('click',function(e){
+eightball.addEventListener('animationend', () => {
+    results();
+    button.parentNode.replaceChild(buttonAgain, button);
+    });
+
+
+buttonAgain.addEventListener('click',function(e){
     location.reload();
 });

@@ -52,6 +52,23 @@ input {
     margin-top: 25px;
     font-size: 16px;
 }
+.button-cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+button {
+    margin-top: 25px;
+    margin-left: 20px;
+    padding: 15px;
+    color: #f6ebf2;
+    background-color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
 #eight-ball {
     border-radius: 50%;
     background-color: #000;
@@ -103,15 +120,6 @@ p#answer {
     padding: 15px;
 }
 
-#button {
-    margin-top: 100px;
-    padding: 15px;
-    color: #f6ebf2;
-    background-color: #000;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-}
 
 
 /* #form {
@@ -286,8 +294,15 @@ p#answer {
     p#answer {
         font-size: 14px;
     }
-    #button {
-        margin-top: 50px;
+    .button-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    button {
+        margin-top: 30px;
+        margin-left: 0;
         font-size: 14px;
     }
       }

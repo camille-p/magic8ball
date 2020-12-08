@@ -16,16 +16,19 @@
     <div id="wrapper">
         <h1>Magic <span>8</span> Ball</h1>
         
-        <h2>Ask me what you want to know and shake it baby 🔮</h2>
+        <h2>Ask me what you want to know 🔮</h2>
         <p>(I only answer to yes/no questions)</p>
-        <input type="text" id="question"/>
+        <div class="button-cta">
+            <input type="text" id="question"/>
+            <button id="button" class="hvr-grow">Shake it baby!</button>
+        </div>
         <div id="eight-ball">
             <div class="ball" id="ball-answer">
                 <p id="eight">8</p>
                 <p id="answer" class="hide"></p>
             </div>
         </div>
-        <button id="button" class="hvr-grow">I have another question</button>
+        
         <!-- <form id="form" action="./french.html">
             <label for="language">Choose a language:</label>
             <select id="language" name="language">
