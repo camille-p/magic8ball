@@ -2,67 +2,66 @@ let randomNumber = Math.floor(Math.random() * 20);
 let eightBall = ' '
 switch (randomNumber) {
     case 0:
-    eightBall = "D'après moi oui";
+    eightBall = 'It is certain';
     break;
     case 1:
-    eightBall = "C'est certain";
+    eightBall = 'It is decidedly so';
     break;
     case 2:
-    eightBall = "Oui absolument";
+    eightBall = 'Without a doubt';
     break;
     case 3:
-    eightBall = "Tu peux compter dessus";
+    eightBall = 'Yes – definitely';
     break;
     case 4:
-    eightBall = "Sans aucun doute";
+    eightBall = 'You may rely on it';
     break;
     case 5:
-    eightBall = "Très probable";
+    eightBall = 'As I see it, yes';
     break;
     case 6:
-    eightBall = "Oui";
+    eightBall = 'Most likely';
     break;
     case 7:
-    eightBall = "C'est bien parti";
+    eightBall = 'Outlook good';
     break;
     case 8:
-    eightBall = "Essaye plus tard";
+    eightBall = 'Yes';
     break;
     case 9:
-    eightBall = "Essaye encore";
+    eightBall = 'Signs point to yes';
     break;
     case 10:
-    eightBall = "Impossible";
+    eightBall = 'Reply hazy, try again';
     break;
     case 11:
-    eightBall = "Pas d'avis";
+    eightBall = 'Ask again later';
     break;
     case 12:
-    eightBall = "C'est ton destin";
+    eightBall = 'Better not tell you now';
     break;
     case 13:
-    eightBall = "Le sort en est jeté";
+    eightBall = 'Cannot predict now';
     break;
     case 14:
-    eightBall = "Une chance sur deux";
+    eightBall = 'Concentrate and ask again';
     break;
     case 15:
-    eightBall = "Repose ta question";
+    eightBall = "Don't count on it";
     break;
     case 16:
-    eightBall = "C'est non";
+    eightBall = 'My reply is no';
     break;
     case 17:
-    eightBall = "Peu probable";
+    eightBall = 'My sources say no';
     break;
     case 18:
-    eightBall = "Faut pas rêver";
+    eightBall = 'Outlook not so good';
     break;
     case 19:
-    eightBall = "N'y compte pas";
+    eightBall = 'Very doubtful';
     break;
 }
-
 
 
 let eight = document.getElementById('eight');
@@ -70,28 +69,56 @@ let answer = document.getElementById('answer');
 let eightball = document.getElementById('eight-ball');
 let question = document.getElementById('question');
 let ballAnswer = document.getElementById('ball-answer');
+let button = document.getElementById('button');
+let buttonAgain = document.createElement('button');
+buttonAgain.innerHTML = "I have another question!";
+buttonAgain.style.backgroundColor = "#f6ebf2";
+buttonAgain.style.color = "black";
 
-    let shakeIt = function() {
-        eightball.classList.add("shake-hard");
-        
-    }
+
+let shakeIt = function() {
+    eightball.classList.add("shake-hard");
+            
+}
 let results = function() {
-    if(question.value.length < 1) {
-        alert('You need to ask a question!');
-    } else {
-        ballAnswer.classList.add("show");
-        answer.classList.remove("hide");
-        eight.classList.add("hide");
-        answer.innerText = eightBall;
-    }
+    ballAnswer.classList.add("show");
+    answer.classList.remove("hide");
+    eight.classList.add("hide");
+    answer.innerText = eightBall;
+        
 }
 
+eightball.addEventListener('click', () => {
+    if (question.value.length < 1) {
+        alert('Pose moi une question!');
+    } else {
+        shakeIt();
+    }
+    });
 
-eightball.addEventListener('click', shakeIt);
-question.addEventListener('keyup',function(e){
-if (e.keyCode === 13) {
-    shakeIt();
+button.addEventListener('click', () => {
+    if (question.value.length < 1) {
+        alert('Pose moi une question!');
+    } else {
+        shakeIt();
+    }
+});
+
+question.addEventListener('keyup', () => {
+    if (event.keyCode === 13) {
+        shakeIt();
+    }
+});
+
+eightball.addEventListener('animationend', () => {
+    if (question.value.length < 1) {
+        alert('YPose moi une question!');
+    } else {
+    results();
+    button.parentNode.replaceChild(buttonAgain, button);
 }
 });
 
-eightball.addEventListener("animationend", results)
+buttonAgain.addEventListener('click',function(e){
+    location.reload();
+});
