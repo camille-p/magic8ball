@@ -64,47 +64,60 @@ switch (randomNumber) {
 }
 
 
-    let eight = document.getElementById('eight');
-    let answer = document.getElementById('answer');
-    let eightball = document.getElementById('eight-ball');
-    let question = document.getElementById('question');
-    let ballAnswer = document.getElementById('ball-answer');
-    let button = document.getElementById('button');
-    let buttonAgain = document.createElement('button');
-    buttonAgain.innerHTML = "I have another question";
+let eight = document.getElementById('eight');
+let answer = document.getElementById('answer');
+let eightball = document.getElementById('eight-ball');
+let question = document.getElementById('question');
+let ballAnswer = document.getElementById('ball-answer');
+let button = document.getElementById('button');
+let buttonAgain = document.createElement('button');
+buttonAgain.innerHTML = "I have another question!";
+buttonAgain.style.backgroundColor = "#f6ebf2";
+buttonAgain.style.color = "black";
 
 
-        let shakeIt = function() {
-            eightball.classList.add("shake-hard");
+let shakeIt = function() {
+    eightball.classList.add("shake-hard");
             
-        }
-    let results = function() {
-        if(question.value.length < 1) {
-            alert('You need to ask a question!');
-        } else {
-            ballAnswer.classList.add("show");
-            answer.classList.remove("hide");
-            eight.classList.add("hide");
-            answer.innerText = eightBall;
-        }
-    }
+}
+let results = function() {
+    ballAnswer.classList.add("show");
+    answer.classList.remove("hide");
+    eight.classList.add("hide");
+    answer.innerText = eightBall;
+        
+}
 
-eightball.addEventListener('click', shakeIt);  
-
-
-question.addEventListener('keypress', () => {
-    if (event.keyCode === 13) {
+eightball.addEventListener('click', () => {
+    if (question.value.length < 1) {
+        alert('You need to ask a question!');
+    } else {
         shakeIt();
     }
     });
 
-button.addEventListener('click', shakeIt);    
+button.addEventListener('click', () => {
+    if (question.value.length < 1) {
+        alert('You need to ask a question!');
+    } else {
+        shakeIt();
+    }
+});
+
+question.addEventListener('keyup', () => {
+    if (event.keyCode === 13) {
+        shakeIt();
+    }
+});
 
 eightball.addEventListener('animationend', () => {
+    if (question.value.length < 1) {
+        alert('You need to ask a question!');
+    } else {
     results();
     button.parentNode.replaceChild(buttonAgain, button);
-    });
-
+}
+});
 
 buttonAgain.addEventListener('click',function(e){
     location.reload();
