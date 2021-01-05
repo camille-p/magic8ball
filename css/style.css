@@ -120,11 +120,10 @@ p#answer {
     padding: 15px;
 }
 
-
-
-/* #form {
+#form {
     margin-top: 50px;
-} */
+    padding-bottom: 50px;
+} 
 
 .show {
     background-color: #010726!important;

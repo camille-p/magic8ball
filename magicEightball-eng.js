@@ -122,3 +122,13 @@ eightball.addEventListener('animationend', () => {
 buttonAgain.addEventListener('click',function(e){
     location.reload();
 });
+
+function changeLanguage() {
+    let x = document.getElementById("language").value;
+    if (x === "french") {
+        window.location.pathname = 'magicEightball/french.html'
+    } else if (x === "english"){
+        window.location.pathname = 'magicEightball'
+    }
+}
+

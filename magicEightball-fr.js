@@ -2,64 +2,64 @@ let randomNumber = Math.floor(Math.random() * 20);
 let eightBall = ' '
 switch (randomNumber) {
     case 0:
-    eightBall = 'It is certain';
+    eightBall = 'Essaye plus tard';
     break;
     case 1:
-    eightBall = 'It is decidedly so';
+    eightBall = 'Essaye encore';
     break;
     case 2:
-    eightBall = 'Without a doubt';
+    eightBall = "Pas d'avis";
     break;
     case 3:
-    eightBall = 'Yes – definitely';
+    eightBall = "C'est ton destin";
     break;
     case 4:
-    eightBall = 'You may rely on it';
+    eightBall = 'Le sort en est jeté';
     break;
     case 5:
-    eightBall = 'As I see it, yes';
+    eightBall = 'Une chance sur deux';
     break;
     case 6:
-    eightBall = 'Most likely';
+    eightBall = 'Repose ta question';
     break;
     case 7:
-    eightBall = 'Outlook good';
+    eightBall = "D'après moi oui";
     break;
     case 8:
-    eightBall = 'Yes';
+    eightBall = "C'est certain";
     break;
     case 9:
-    eightBall = 'Signs point to yes';
+    eightBall = 'Oui absolument';
     break;
     case 10:
-    eightBall = 'Reply hazy, try again';
+    eightBall = 'Tu peux compter dessus';
     break;
     case 11:
-    eightBall = 'Ask again later';
+    eightBall = 'Sans aucun doute';
     break;
     case 12:
-    eightBall = 'Better not tell you now';
+    eightBall = 'Très probable';
     break;
     case 13:
-    eightBall = 'Cannot predict now';
+    eightBall = 'Oui';
     break;
     case 14:
-    eightBall = 'Concentrate and ask again';
+    eightBall = "C'est bien parti";
     break;
     case 15:
-    eightBall = "Don't count on it";
+    eightBall = "C'est non";
     break;
     case 16:
-    eightBall = 'My reply is no';
+    eightBall = 'Peu probable';
     break;
     case 17:
-    eightBall = 'My sources say no';
+    eightBall = 'Faut pas rêver';
     break;
     case 18:
-    eightBall = 'Outlook not so good';
+    eightBall = "N'y compte pas";
     break;
     case 19:
-    eightBall = 'Very doubtful';
+    eightBall = 'Impossible';
     break;
 }
 
@@ -71,7 +71,7 @@ let question = document.getElementById('question');
 let ballAnswer = document.getElementById('ball-answer');
 let button = document.getElementById('button');
 let buttonAgain = document.createElement('button');
-buttonAgain.innerHTML = "I have another question!";
+buttonAgain.innerHTML = "J'ai une autre question!";
 buttonAgain.style.backgroundColor = "#f6ebf2";
 buttonAgain.style.color = "black";
 
@@ -112,7 +112,7 @@ question.addEventListener('keyup', () => {
 
 eightball.addEventListener('animationend', () => {
     if (question.value.length < 1) {
-        alert('YPose moi une question!');
+        alert('Pose moi une question!');
     } else {
     results();
     button.parentNode.replaceChild(buttonAgain, button);
@@ -122,3 +122,12 @@ eightball.addEventListener('animationend', () => {
 buttonAgain.addEventListener('click',function(e){
     location.reload();
 });
+
+function changeLanguage() {
+    let x = document.getElementById("language").value;
+    if (x === "french") {
+        window.location.pathname = 'magicEightball/french.html'
+    } else if (x === "english"){
+        window.location.pathname = 'magicEightball'
+    }
+}
