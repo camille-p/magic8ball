@@ -126,9 +126,9 @@ buttonAgain.addEventListener('click',function(e){
 function changeLanguage() {
     let x = document.getElementById("language").value;
     if (x === "french") {
-        window.location.pathname = 'magicEightball/french.html'
+        window.location.pathname = 'magic8ball/french.html'
     } else if (x === "english"){
-        window.location.pathname = 'magicEightball'
+        window.location.pathname = 'magic8ball'
     }
 }
 
