@@ -16,8 +16,9 @@ html {
 
 body {
     min-height: 100%;
-    background: rgb(24,8,74);
-background: linear-gradient(180deg, rgba(24,8,74,1) 0%, rgba(65,8,75,1) 31%, rgba(121,9,77,1) 60%, rgba(139,38,138,1) 100%);
+    background-image: url('../img/background.jpg');
+    /*background: rgb(24,8,74);
+    background: linear-gradient(180deg, rgba(24,8,74,1) 0%, rgba(65,8,75,1) 31%, rgba(121,9,77,1) 60%, rgba(139,38,138,1) 100%);*/
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -79,7 +80,8 @@ button {
     margin-top: 75px;
     display: grid;
     grid-template: 25% 50% 25% / 25% 50% 25%;
-    
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(255,255,255,0.31); 
+box-shadow: 5px 5px 15px 5px rgba(255,255,255,0.31);
 }
 
 #ball-answer {
@@ -125,6 +127,9 @@ p#answer {
     padding-bottom: 50px;
     float: right;
     margin-right: 50px;
+}
+label {
+  color: #fff;
 } 
 
 .show {
@@ -266,6 +271,12 @@ p#answer {
         transform: scale(1.1);
       }
 
+      @media only screen and (max-width: 768px) {
+        input {
+          width: 450px;
+      }
+      }
+
     @media only screen and (max-width: 414px) {
        
         #wrapper {
@@ -278,7 +289,7 @@ p#answer {
     }
     input {
         padding: 15px;
-        width: 325px;
+        width: 300px;
     }
     #wrapper h1 {
         font-size: 32px;
