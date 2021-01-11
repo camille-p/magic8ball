@@ -66,6 +66,7 @@ switch (randomNumber) {
 
 let eight = document.getElementById('eight');
 let answer = document.getElementById('answer');
+let triangle = document.getElementById('triangle');
 let eightball = document.getElementById('eight-ball');
 let question = document.getElementById('question');
 let ballAnswer = document.getElementById('ball-answer');
@@ -83,6 +84,7 @@ let shakeIt = function() {
 let results = function() {
     ballAnswer.classList.add("show");
     answer.classList.remove("hide");
+    triangle.classList.remove("hide");
     eight.classList.add("hide");
     answer.innerText = eightBall;
         
