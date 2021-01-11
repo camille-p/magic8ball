@@ -68,6 +68,7 @@ button {
     border: none;
     border-radius: 8px;
     font-size: 16px;
+    font-family: 'Helvetica';
 }
 
 #eight-ball {
@@ -130,6 +131,7 @@ p#answer {
 }
 label {
   color: #fff;
+  font-family: 'Helvetica' !important;
 } 
 
 .show {
