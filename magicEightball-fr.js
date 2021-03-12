@@ -129,6 +129,9 @@ function changeLanguage() {
   if (x === "french") {
     window.location.pathname = "magic8ball/french.html";
   }
+  if (x === "spanish") {
+    window.location.pathname = "magic8ball/spanish.html";
+  }
   if (x === "english") {
     window.location.pathname = "magic8ball";
   }
