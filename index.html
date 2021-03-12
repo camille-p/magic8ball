@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Magic 8 Ball</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Magic 8 Eight Ball">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Camille Puyo">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reset.css">
-</head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Magic 8 Eight Ball" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Camille Puyo" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+  </head>
 
-<body>
+  <body>
     <div id="wrapper">
-        <h1>Magic <span>8</span> Ball</h1>
-        
-        <h2>Ask me what you want to know 🔮</h2>
-        <p>(I only answer to yes/no questions)</p>
-        <div class="button-cta">
-            <input type="text" id="question"/>
-            <button id="button" class="hvr-grow">Shake it baby!</button>
+      <h1>Magic <span>8</span> Ball</h1>
+
+      <h2>Ask me what you want to know 🔮</h2>
+      <p>(I only answer to yes/no questions)</p>
+      <div class="button-cta">
+        <input type="text" id="question" />
+        <button id="button" class="hvr-grow">Shake it baby!</button>
+      </div>
+      <div id="eight-ball">
+        <div class="ball" id="ball-answer">
+          <p id="eight">8</p>
+          <div id="triangle" class="hide">
+            <p id="answer" class="hide"></p>
+          </div>
         </div>
-        <div id="eight-ball">
-            <div class="ball" id="ball-answer">
-                
-                <p id="eight">8</p>
-                <div id="triangle" class="hide">
-                <p id="answer" class="hide"></p>
-            </div>
-            </div>
-        </div>
-        
-        <form id="form">
-            <label for="language">Choose a language:</label>
-            <select id="language" name="language" onchange= "changeLanguage()">
-                <option value="english">English</option>
-                <option value="french">French</option>
-            </select>
-        </form>
+      </div>
+
+      <form id="form">
+        <label for="language">Choose a language:</label>
+        <select id="language" name="language" onchange="changeLanguage()">
+          <option value="english">English</option>
+          <option value="french">French</option>
+          <option value="portuguese">Portuguese</option>
+        </select>
+      </form>
     </div>
     <script src="./magicEightball-eng.js"></script>
-</body>
-
+  </body>
 </html>
-

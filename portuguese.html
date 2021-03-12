@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="pt">
   <head>
     <title>Magic 8 Ball</title>
     <meta charset="UTF-8" />
@@ -15,11 +15,11 @@
     <div id="wrapper">
       <h1>Magic <span>8</span> Ball</h1>
 
-      <h2>Demande moi ce que tu veux et secoue moi! 🔮</h2>
-      <p>(Je ne réponds qu'aux questions type oui/non)</p>
+      <h2>Pergunte o que você quiser e me chacoalha! 🔮</h2>
+      <p>(Faça perguntas apenas com respostas de sim o não)</p>
       <div class="button-cta">
         <input type="text" id="question" />
-        <button id="button" class="hvr-grow">Secoue moi baby!</button>
+        <button id="button" class="hvr-grow">Me chacoaolha baby!</button>
       </div>
       <div id="eight-ball">
         <div class="ball" id="ball-answer">
@@ -31,14 +31,14 @@
       </div>
 
       <form id="form">
-        <label for="language">Choisis une langue :</label>
+        <label for="language">Escolha um idioma :</label>
         <select id="language" name="language" onchange="changeLanguage()">
-          <option value="french">Français</option>
-          <option value="english">Anglais</option>
-          <option value="portuguese">Portugais</option>
+          <option value="portuguese">Português</option>
+          <option value="french">Francês</option>
+          <option value="english">Inglês</option>
         </select>
       </form>
     </div>
-    <script src="./magicEightball-fr.js"></script>
+    <script src="./magicEightball-pt.js"></script>
   </body>
 </html>

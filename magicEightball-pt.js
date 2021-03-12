@@ -2,64 +2,64 @@ let randomNumber = Math.floor(Math.random() * 20);
 let eightBall = " ";
 switch (randomNumber) {
   case 0:
-    eightBall = "It is certain";
+    eightBall = "Com certeza";
     break;
   case 1:
-    eightBall = "It is decidedly so";
+    eightBall = "Definitivamente sim";
     break;
   case 2:
-    eightBall = "Without a doubt";
+    eightBall = "Sem duvida";
     break;
   case 3:
-    eightBall = "Yes – definitely";
+    eightBall = "É uma ótima decisão";
     break;
   case 4:
-    eightBall = "You may rely on it";
+    eightBall = "Pode contar com isso";
     break;
   case 5:
-    eightBall = "As I see it, yes";
+    eightBall = "Na minha opinão, sim";
     break;
   case 6:
-    eightBall = "Most likely";
+    eightBall = "Provavelmente sim";
     break;
   case 7:
-    eightBall = "Outlook good";
+    eightBall = "Isso parece bom";
     break;
   case 8:
-    eightBall = "Yes";
+    eightBall = "SIM";
     break;
   case 9:
-    eightBall = "Signs point to yes";
+    eightBall = "Os signais dizem sim";
     break;
   case 10:
-    eightBall = "Reply hazy, try again";
+    eightBall = "Resposta obscura, tente novamente";
     break;
   case 11:
-    eightBall = "Ask again later";
+    eightBall = "Pergunte mais tarde";
     break;
   case 12:
-    eightBall = "Better not tell you now";
+    eightBall = "Melhor não falar agora";
     break;
   case 13:
-    eightBall = "Cannot predict now";
+    eightBall = "Não posso prever agora";
     break;
   case 14:
-    eightBall = "Concentrate and ask again";
+    eightBall = "Se concentre e pergunte novamente";
     break;
   case 15:
-    eightBall = "Don't count on it";
+    eightBall = "Não conte com isso";
     break;
   case 16:
-    eightBall = "My reply is no";
+    eightBall = "Minha resposta é não";
     break;
   case 17:
-    eightBall = "My sources say no";
+    eightBall = "Minhas fontes dizem não";
     break;
   case 18:
-    eightBall = "Outlook not so good";
+    eightBall = "Isso não parece bom";
     break;
   case 19:
-    eightBall = "Very doubtful";
+    eightBall = "Muito duvidoso";
     break;
 }
 
@@ -71,7 +71,7 @@ let question = document.getElementById("question");
 let ballAnswer = document.getElementById("ball-answer");
 let button = document.getElementById("button");
 let buttonAgain = document.createElement("button");
-buttonAgain.innerHTML = "I have another question!";
+buttonAgain.innerHTML = "Tenho uma outra pergunta!";
 buttonAgain.style.backgroundColor = "#f6ebf2";
 buttonAgain.style.color = "black";
 
@@ -88,7 +88,7 @@ let results = function () {
 
 eightball.addEventListener("click", () => {
   if (question.value.length < 1) {
-    alert("You need to ask a question!");
+    alert("Faça uma pergunta!");
   } else {
     shakeIt();
   }
@@ -96,7 +96,7 @@ eightball.addEventListener("click", () => {
 
 button.addEventListener("click", () => {
   if (question.value.length < 1) {
-    alert("You need to ask a question!");
+    alert("Faça uma pergunta!");
   } else {
     shakeIt();
   }
@@ -110,7 +110,7 @@ question.addEventListener("keyup", () => {
 
 eightball.addEventListener("animationend", () => {
   if (question.value.length < 1) {
-    alert("You need to ask a question!");
+    alert("Faça uma pergunta!");
   } else {
     results();
     button.parentNode.replaceChild(buttonAgain, button);

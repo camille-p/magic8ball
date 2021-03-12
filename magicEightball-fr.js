@@ -1,135 +1,135 @@
 let randomNumber = Math.floor(Math.random() * 20);
-let eightBall = ' '
+let eightBall = " ";
 switch (randomNumber) {
-    case 0:
-    eightBall = 'Essaye plus tard';
+  case 0:
+    eightBall = "Essaye plus tard";
     break;
-    case 1:
-    eightBall = 'Essaye encore';
+  case 1:
+    eightBall = "Essaye encore";
     break;
-    case 2:
+  case 2:
     eightBall = "Pas d'avis";
     break;
-    case 3:
+  case 3:
     eightBall = "C'est ton destin";
     break;
-    case 4:
-    eightBall = 'Le sort en est jeté';
+  case 4:
+    eightBall = "Le sort en est jeté";
     break;
-    case 5:
-    eightBall = 'Une chance sur deux';
+  case 5:
+    eightBall = "Une chance sur deux";
     break;
-    case 6:
-    eightBall = 'Repose ta question';
+  case 6:
+    eightBall = "Repose ta question";
     break;
-    case 7:
+  case 7:
     eightBall = "D'après moi oui";
     break;
-    case 8:
+  case 8:
     eightBall = "C'est certain";
     break;
-    case 9:
-    eightBall = 'Oui absolument';
+  case 9:
+    eightBall = "Oui absolument";
     break;
-    case 10:
-    eightBall = 'Tu peux compter dessus';
+  case 10:
+    eightBall = "Tu peux compter dessus";
     break;
-    case 11:
-    eightBall = 'Sans aucun doute';
+  case 11:
+    eightBall = "Sans aucun doute";
     break;
-    case 12:
-    eightBall = 'Très probable';
+  case 12:
+    eightBall = "Très probable";
     break;
-    case 13:
-    eightBall = 'Oui';
+  case 13:
+    eightBall = "Oui";
     break;
-    case 14:
+  case 14:
     eightBall = "C'est bien parti";
     break;
-    case 15:
+  case 15:
     eightBall = "C'est non";
     break;
-    case 16:
-    eightBall = 'Peu probable';
+  case 16:
+    eightBall = "Peu probable";
     break;
-    case 17:
-    eightBall = 'Faut pas rêver';
+  case 17:
+    eightBall = "Faut pas rêver";
     break;
-    case 18:
+  case 18:
     eightBall = "N'y compte pas";
     break;
-    case 19:
-    eightBall = 'Impossible';
+  case 19:
+    eightBall = "Impossible";
     break;
 }
 
-
-let eight = document.getElementById('eight');
-let answer = document.getElementById('answer');
-let triangle = document.getElementById('triangle');
-let eightball = document.getElementById('eight-ball');
-let question = document.getElementById('question');
-let ballAnswer = document.getElementById('ball-answer');
-let button = document.getElementById('button');
-let buttonAgain = document.createElement('button');
+let eight = document.getElementById("eight");
+let answer = document.getElementById("answer");
+let triangle = document.getElementById("triangle");
+let eightball = document.getElementById("eight-ball");
+let question = document.getElementById("question");
+let ballAnswer = document.getElementById("ball-answer");
+let button = document.getElementById("button");
+let buttonAgain = document.createElement("button");
 buttonAgain.innerHTML = "J'ai une autre question!";
 buttonAgain.style.backgroundColor = "#f6ebf2";
 buttonAgain.style.color = "black";
 
+let shakeIt = function () {
+  eightball.classList.add("shake-hard");
+};
+let results = function () {
+  ballAnswer.classList.add("show");
+  answer.classList.remove("hide");
+  triangle.classList.remove("hide");
+  eight.classList.add("hide");
+  answer.innerText = eightBall;
+};
 
-let shakeIt = function() {
-    eightball.classList.add("shake-hard");
-            
-}
-let results = function() {
-    ballAnswer.classList.add("show");
-    answer.classList.remove("hide");
-    triangle.classList.remove("hide");
-    eight.classList.add("hide");
-    answer.innerText = eightBall;
-        
-}
-
-eightball.addEventListener('click', () => {
-    if (question.value.length < 1) {
-        alert('Pose moi une question!');
-    } else {
-        shakeIt();
-    }
-    });
-
-button.addEventListener('click', () => {
-    if (question.value.length < 1) {
-        alert('Pose moi une question!');
-    } else {
-        shakeIt();
-    }
+eightball.addEventListener("click", () => {
+  if (question.value.length < 1) {
+    alert("Pose moi une question!");
+  } else {
+    shakeIt();
+  }
 });
 
-question.addEventListener('keyup', () => {
-    if (event.keyCode === 13) {
-        shakeIt();
-    }
+button.addEventListener("click", () => {
+  if (question.value.length < 1) {
+    alert("Pose moi une question!");
+  } else {
+    shakeIt();
+  }
 });
 
-eightball.addEventListener('animationend', () => {
-    if (question.value.length < 1) {
-        alert('Pose moi une question!');
-    } else {
+question.addEventListener("keyup", () => {
+  if (event.keyCode === 13) {
+    shakeIt();
+  }
+});
+
+eightball.addEventListener("animationend", () => {
+  if (question.value.length < 1) {
+    alert("Pose moi une question!");
+  } else {
     results();
     button.parentNode.replaceChild(buttonAgain, button);
-}
+  }
 });
 
-buttonAgain.addEventListener('click',function(e){
-    location.reload();
+buttonAgain.addEventListener("click", function (e) {
+  location.reload();
 });
 
 function changeLanguage() {
-    let x = document.getElementById("language").value;
-    if (x === "french") {
-        window.location.pathname = 'magic8ball/french.html'
-    } else if (x === "english"){
-        window.location.pathname = 'magic8ball'
-    }
+  let x = document.getElementById("language").value;
+  if (x === "portuguese") {
+    window.location.pathname = "magic8ball/portuguese.html";
+  }
+  if (x === "french") {
+    window.location.pathname = "magic8ball/french.html";
+  }
+  if (x === "english") {
+    window.location.pathname = "magic8ball";
+  }
 }
